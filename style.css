@@ -1,1 +1,212 @@
+/* ==========================================================================
+   1. CONFIGURAÇÕES GERAIS, RESETS E VARIÁVEIS
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root {
+    --cor-primaria: #1b5e20;       /* Verde Escuro (Base do Agrinho) */
+    --cor-secundaria: #4caf50;     /* Verde Vivo (Sustentabilidade) */
+    --cor-destaque: #ff9800;       /* Laranja (Destaque e Tecnologia) */
+    --cor-fundo: #f4f6f4;          /* Cinza Claro Ecológico */
+    --cor-card: #ffffff;           /* Branco para blocos de conteúdo */
+    --cor-texto: #2c3e50;          /* Azul Escuro Acinzentado para leitura limpa */
+    --cor-texto-suave: #555555;    /* Cinza para parágrafos secundários */
+}
+
+body {
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    line-height: 1.7;
+    font-size: 16px;
+}
+
+/* ==========================================================================
+   2. TOPO DO SITE (HEADER)
+   ========================================================================== */
+header {
+    background: linear-gradient(135deg, var(--cor-primaria), #0d3c12);
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 10px;
+    letter-spacing: -0.5px;
+}
+
+header p {
+    font-size: 1.2rem;
+    color: #c8e6c9;
+    font-weight: 300;
+}
+
+/* ==========================================================================
+   3. CONTEÚDO PRINCIPAL (MAIN & ARTICLE)
+   ========================================================================== */
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+article h2 {
+    color: var(--cor-primaria);
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+    text-align: center;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+/* Linha decorativa abaixo do título principal */
+article h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background-color: var(--cor-destaque);
+    border-radius: 2px;
+}
+
+/* ==========================================================================
+   4. ESTILIZAÇÃO DAS SEÇÕES (CARDS DO SITE)
+   ========================================================================== */
+section {
+    background-color: var(--cor-card);
+    padding: 30px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.03);
+    border-left: 5px solid var(--cor-secundaria);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Efeito sutil ao passar o mouse por cima do bloco */
+section:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.06);
+}
+
+section h3 {
+    color: var(--cor-primaria);
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+}
+
+section p {
+    color: var(--cor-texto-suave);
+    margin-bottom: 15px;
+}
+
+/* Remove a margem do último parágrafo para alinhar o espaçamento */
+section p:last-child {
+    margin-bottom: 0;
+}
+
+/* ==========================================================================
+   5. LISTAS E ELEMENTOS ESPECÍFICOS (UL, DL, DT, DD)
+   ========================================================================== */
+/* Listas com marcadores customizados (Sustentabilidade / Inovações) */
+section ul {
+    list-style: none;
+    padding-left: 5px;
+}
+
+section ul li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 12px;
+    color: var(--cor-texto-suave);
+}
+
+section ul li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--cor-secundaria);
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+/* Lista de Definições (Impactos Ambientais) */
+dl {
+    margin-top: 15px;
+}
+
+dt {
+    color: #c62828; /* Tom avermelhado para destacar problemas/impactos */
+    font-size: 1.1rem;
+    margin-top: 15px;
+}
+
+dd {
+    color: var(--cor-texto-suave);
+    padding-left: 15px;
+    border-left: 2px solid #ffcdd2;
+    margin-bottom: 15px;
+    margin-left: 0;
+}
+
+/* Destaques internos em negrito */
+strong {
+    color: var(--cor-texto);
+}
+
+/* ==========================================================================
+   6. RODAPÉ (FOOTER)
+   ========================================================================== */
+footer {
+    background-color: #113814;
+    color: #a5d6a7;
+    text-align: center;
+    padding: 25px 20px;
+    margin-top: 60px;
+    font-size: 0.9rem;
+}
+
+/* ==========================================================================
+   7. RESPONSIVIDADE (MEDIA QUERIES PARA CELULAR)
+   ========================================================================== */
+@media (max-width: 600px) {
+    header {
+        padding: 40px 15px;
+    }
+
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    main {
+        padding: 20px 15px;
+    }
+
+    article h2 {
+        font-size: 1.4rem;
+    }
+
+    section {
+        padding: 20px;
+        border-left-width: 4px;
+    }
+
+    section h3 {
+        font-size: 1.2rem;
+    }
+}
 
